@@ -24,8 +24,15 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough
 
-https://www.loom.com/share/d79b9cf55366479aaf15219104e5882b?sid=1ec874b4-5d92-4419-8a5b-34ba326a5dea
-
+<div>
+    <a href="https://www.loom.com/share/d79b9cf55366479aaf15219104e5882b">
+      <p>Loom Message - 26 June 2025 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/d79b9cf55366479aaf15219104e5882b">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/d79b9cf55366479aaf15219104e5882b-5eb8149af51a232b-full-play.gif">
+    </a>
+  </div>
+  
 ## Notes
 
 The main challenges was with configuring constraints and having the UI respond in the ways I wanted it to. Additionally, it took me awhile to figure out the syntax of the code, as this assignment was more complex since there is no starter code. 
