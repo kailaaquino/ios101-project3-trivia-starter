@@ -16,13 +16,13 @@ struct Question {
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var optionButton1: UIButton!
     @IBOutlet weak var optionButton2: UIButton!
     @IBOutlet weak var optionButton3: UIButton!
     @IBOutlet weak var optionButton4: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var questionNumberLabel: UILabel!
     
     @IBAction func answerTapped(_ sender: UIButton) {
         
@@ -37,6 +37,13 @@ class ViewController: UIViewController {
         showQuestion()
     }
     
+    @IBAction func restartGame(_ sender: UIButton) {
+        currentQuestionIndex = 0
+        correctAnswers = 0
+        restartButton.isHidden = true
+        categoryLabel.isHidden = false
+        showQuestion()
+    }
     var questions: [Question] = [
         Question(
             text: "Who was the first American Idol Winner?",
@@ -65,6 +72,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showQuestion()
+        restartButton.isHidden = true
+
     }
     
     func showQuestion(){
@@ -88,10 +97,14 @@ class ViewController: UIViewController {
     }
     func showFinalScore(){
         questionLabel.text = "You got \(correctAnswers) out of \(questions.count) correct!"
-               optionButton1.isHidden = true
-               optionButton2.isHidden = true
-               optionButton3.isHidden = true
-               optionButton4.isHidden = true
+        optionButton1.isHidden = true
+        optionButton2.isHidden = true
+        optionButton3.isHidden = true
+        optionButton4.isHidden = true
+        categoryLabel.isHidden = true
+        restartButton.isHidden = false
+
+        
     }
     
 }
